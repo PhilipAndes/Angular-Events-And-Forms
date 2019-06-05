@@ -12,6 +12,9 @@
 1. <b>Mouse Events & Manipulating State:</b> <br>
 Files: users.component.ts, users.component.html
 
+2. <b>Toggling Values With An Event:</b> <br>
+Files: users.component.ts, users.component.html
+
 
 ## Development server
 
