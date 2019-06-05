@@ -18,6 +18,9 @@ Files: users.component.ts, users.component.html
 3. <b>Keyboard & Input Events:</b> <br>
 Files: users.component.ts, users.component.html
 
+4. <b>ngModel & 2 Way Data Binding:</b> <br>
+Files: app.module.ts, users.component.ts, users.component.html
+
 
 ## Development server
 
