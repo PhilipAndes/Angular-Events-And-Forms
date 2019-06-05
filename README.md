@@ -10,8 +10,7 @@
 - Notice: uncomment the right part for each lesson!
 
 1. <b>Mouse Events & Manipulating State:</b> <br>
-Files: component-map > user-map <br>
-app.component.html(<app-user>)
+Files: users.component.ts, users.component.html
 
 
 ## Development server
