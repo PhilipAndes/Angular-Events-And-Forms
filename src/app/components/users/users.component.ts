@@ -11,12 +11,7 @@ export class UsersComponent implements OnInit {
   user: User = {
     firstName: '',
     lastName: '',
-    age: null,
-    address: {
-      street: '',
-      city: '',
-      state: ''
-    }
+    email: ''
   }
   users: User[];
   showExtended: boolean = true;
@@ -31,12 +26,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Tim',
         lastName: 'Smith',
-        age: 70,
-        address: {
-          street: '50 Main st',
-          city: 'Boston',
-          state: 'MA'
-        },
+        email: 'tim@gmail.com',
         isActive: true,
         registered: new Date('01/02/2019 08:30:00'),
         hide: true
@@ -44,12 +34,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'John',
         lastName: 'Doe',
-        age: 34,
-        address: {
-          street: '20 School st',
-          city: 'Lynn',
-          state: 'MA'
-        },
+        email: 'JDoe@yahoo.com',
         isActive: false,
         registered: new Date('03/11/2018 06:20:00'),
         hide: true
@@ -57,12 +42,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Karen',
         lastName: 'Williams',
-        age: 26,
-        address: {
-          street: '55 Mill st',
-          city: 'Miami',
-          state: 'FL'
-        },
+        email: 'KarenW@gmail.com',
         isActive: true,
         registered: new Date('10/12/2017 10:30:00'),
         hide: true
@@ -72,41 +52,27 @@ export class UsersComponent implements OnInit {
     this.loaded = true;
   }
 
-  addUser() {
-    // We always want a user to be active
-    this.user.isActive = true;
-    
-    // Set to current date
-    this.user.registered = new Date();
+  // addUser() {
+  //   // We always want a user to be active
+  //   this.user.isActive = true;
 
-    // unshift will add to the beginning
-    this.users.unshift(this.user);
+  //   // Set to current date
+  //   this.user.registered = new Date();
 
-    // To clear out the forum:
-    this.user = {
-      firstName: '',
-      lastName: '',
-      age: null,
-      address: {
-        street: '',
-        city: '',
-        state: ''
-      }
-    }
-  }
+  //   // unshift will add to the beginning
+  //   this.users.unshift(this.user);
 
-  // toggleHide(user: User) {
-  //   user.hide = !user.hide;
+  //   // To clear out the forum:
+  //   this.user = {
+  //     firstName: '',
+  //     lastName: '',
+  //     email: ''
+  //   }
   // }
 
   onSubmit(e) {
     console.log(123);
     e.preventDefault();
-  }
-
-  fireEvent(e) {
-    console.log(e.target.value);
-    console.log(e.type);
   }
 
 }

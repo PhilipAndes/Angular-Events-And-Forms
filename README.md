@@ -21,6 +21,9 @@ Files: users.component.ts, users.component.html
 4. <b>ngModel & 2 Way Data Binding:</b> <br>
 Files: app.module.ts, users.component.ts, users.component.html
 
+5. <b>Template Driven Forms - Validation:</b> <br>
+Files: user.component.ts, users.component.ts, users.component.html, User.ts
+
 
 ## Development server
 
