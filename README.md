@@ -24,6 +24,9 @@ Files: app.module.ts, users.component.ts, users.component.html
 5. <b>Template Driven Forms - Validation:</b> <br>
 Files: user.component.ts, users.component.ts, users.component.html, User.ts
 
+6. <b>Template Driven Forms - Submission:</b> <br>
+Files: users.component.ts, users.component.html
+
 
 ## Development server
 

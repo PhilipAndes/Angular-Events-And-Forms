@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { User } from '../../models/User';
 
@@ -18,6 +18,7 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAdd: boolean = false;
   showUserForm: boolean = false;
+  @ViewChild('userForm') form: any;
 
   constructor() { }
 
@@ -52,27 +53,29 @@ export class UsersComponent implements OnInit {
     this.loaded = true;
   }
 
-  // addUser() {
-  //   // We always want a user to be active
-  //   this.user.isActive = true;
+// We going to put in some curly braces with value and valid
+// Then we are going to type that to an object
+// Value which is going to have the User type
+// valid which is going to be a boolean
+  onSubmit({value, valid}: {value: User, valid: boolean}) {
+    // Then we check if the form is valid or not:
+    // Its always valid for us because the button is only enabled if its valid, but we are going to check it here anyway
+    if(!valid){
+      console.log('Form is not valid');
+    } else {
+      // Else we just want to add to the users
+      // Unshift for adding to the beginning of the array
+      // Which takes in value from above which is a User type
+      // Now its just going to take firstname, lastname and email, but we also have isActive, registered and hide so we have to add those things
+      value.isActive = true;
+      value.registered = new Date();
+      value.hide = true;
 
-  //   // Set to current date
-  //   this.user.registered = new Date();
+      this.users.unshift(value);
 
-  //   // unshift will add to the beginning
-  //   this.users.unshift(this.user);
-
-  //   // To clear out the forum:
-  //   this.user = {
-  //     firstName: '',
-  //     lastName: '',
-  //     email: ''
-  //   }
-  // }
-
-  onSubmit(e) {
-    console.log(123);
-    e.preventDefault();
+      //Then we want to reset the form
+      this.form.reset();
+    }
   }
 
 }
