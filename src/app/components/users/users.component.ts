@@ -18,7 +18,7 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAdd: boolean = false;
   showUserForm: boolean = false;
-  @ViewChild('userForm') form: any;
+  @ViewChild('userForm', { static: false }) form: any;
 
   constructor() { }
 
